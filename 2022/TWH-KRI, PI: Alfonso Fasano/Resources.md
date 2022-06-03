@@ -15,6 +15,7 @@
 
 # Projects
 ## Decomposing local field potentials:
+- Signal processing for neuroscientists: https://www.youtube.com/playlist?list=PLgmu23_-2Y9_-Lc0BVUv8SQ1eW9BSzcD3
 ### Fourier transformations
 1. Real Fourier Series: https://medium.com/sho-jp/fourier-transform-101-part-1-b69ea3cb4837
 2. Complex Fourier Series: https://medium.com/sho-jp/fourier-transform-101-part-2-complex-fourier-series-934a885b3921
