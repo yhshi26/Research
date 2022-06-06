@@ -9,6 +9,7 @@
 #### JSON 
 - Documentation: https://www.json.org/json-en.html
 - Working with JSON: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+  - Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 #### CSV files
 - Working with CSV files: https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/
