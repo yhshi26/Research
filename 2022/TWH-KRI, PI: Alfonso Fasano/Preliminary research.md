@@ -16,19 +16,25 @@
 ## Deep Brain Stimulation (DBS) therapy
 - For Parkinson's disease, essential tremor, dystonia and epilepsy
 - Involves implanting of DBS leads (electrodes) into the **subthalamic nucleus** of the thalamus 
-    - The subthalamic nucleus has a recognisable, periodic on/off high activity behaviour that, when reached by continuously recording leads helps neurosurgeons implant the DBS leads in the correct location    
+    - The subthalamic nucleus has a recognisable, periodic on/off high activity behaviour that, when reached by continuously recording leads helps neurosurgeons implant the DBS leads in the correct location 
 
-## 1. Using Beta as a marker of sleep time vs. bed time
-- Patients monitored simultaneously by implanted DBS lead local field potential (LFP) recordings in subthalamic nucleus and fitbit movement recordings
-    - Fitbit records movement (if no movement, sleep but if movement not sleep)
-- Data that will be collected in a (weekly?) survey filled by patients:
-    - REM BFH disease (RBD) (acting out dreams)
-    - Sleep quality
-    - Daytime sleepiness
-- **Are fluctuations in DBS lead beta recordings indicative of something during sleep?**
-    - E.g. sleep phases (which rotate from stage 1-2-3 to REM)
+## Beta waves
+- [Beta waves](https://en.wikipedia.org/wiki/Beta_wave) are neuronal oscillations that occur with a frequency between **12.5-30 Hz** (oscillations or cycles per second)
+- Beta waves can be **further subclassified** into:
+    - Low beta waves: 12.5-16 Hz (Beta 1)
+    - Beta waves: 16.5-20 Hz (Beta 2)
+    - High beta waves 20.5-28 Hz (Beta 3)
 
-## 2. Beta vs. "lesion effects"
+### 1. Using Beta as a marker of sleep time vs. bed time
+- **Are fluctuations in DBS lead beta recordings indicative of something during sleep?** e.g. sleep phases (which rotate from stage 1-2-3 to REM)
+    - Patients monitored simultaneously by implanted DBS lead local field potential (LFP) recordings in subthalamic nucleus and fitbit movement recordings
+        - Fitbit records movement (if no movement, sleep but if movement not sleep)
+    - Data that will be collected in a (weekly?) survey filled by patients:
+        - REM BFH disease (RBD) (acting out dreams)
+        - Sleep quality
+        - Daytime sleepiness
+
+### 2. Beta vs. "lesion effects"
 - Probably an easier project
 - In patients with Parkinson's disease, essential tremor, dystonia and epilepsy, the **subthalamic nucleus is overactive**
     - When the DBS lead is impanted in the subthalamic nucleus, neuron activity in the area is **temporarily reduced due** to the mechanical shock
@@ -37,3 +43,6 @@
 - While stimulation gives the idea of increasing activity, in DBS it is really decreasing activity by confusing neurons with higher electric currents (DBS is also called **high-frequency simulation or HFS**)
     - By confusing neurons we really mean disrupting their transmission (which we have too much of)
 - **Can we look at beta DBS lead recordings to predict when "lesion effects" wear off?**
+    - Build program that recognizes when beta DBS lead recordings go back up again
+    - Ask patients when their symptoms started to improve
+    - Compare program's number with patient's number
