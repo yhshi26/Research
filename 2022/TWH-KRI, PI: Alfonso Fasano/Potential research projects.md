@@ -1,4 +1,4 @@
-# Potential Research Projects
+# Potential research projects
 ## Work with:
 - Programming: MATLAB, databases, cloudbases
 - Math: fourier transform
