@@ -3,6 +3,7 @@
 ### Python
 - Documentation: https://docs.python.org/3/
 - Matplotlib: https://matplotlib.org/stable/index.html
+- NumPy: https://numpy.org/doc/
 - Tutorials:
   - JSON: https://www.w3schools.com/python/python_json.asp
   - Matplotlib: https://www.w3schools.com/python/matplotlib_intro.asp
