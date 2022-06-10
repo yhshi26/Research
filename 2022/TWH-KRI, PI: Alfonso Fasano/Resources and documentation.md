@@ -1,5 +1,9 @@
-# Resources
+# Resources and documentation
 ## Software
+### Python
+- Documentation: https://docs.python.org/3/
+- Matplotlib: https://matplotlib.org/stable/index.html
+
 ### MATLAB
 - Documentation: https://www.mathworks.com/help/matlab/
 - Data import/analysis: https://www.mathworks.com/help/matlab/data-import-and-analysis.html
