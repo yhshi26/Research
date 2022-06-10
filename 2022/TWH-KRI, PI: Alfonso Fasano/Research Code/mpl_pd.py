@@ -17,7 +17,7 @@ print(d)
 #    print(i)
 
 # convert to df
-df = pd.DataFrame(d)
+df = pd.DataFrame(d['DiagnosticData']['LFPTrendLogs'])
 print(df)
 
 # print DataFrame
