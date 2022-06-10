@@ -10,18 +10,17 @@ r = open('redacted')
 
 # convert JSON object to dictionary
 d = json.load(r)
-print(d)
+# print(d)
 
 # finding what index we need
 # for i in d['DiagnosticData']['LFPTrendLogs']:
 #    print(i)
 
-# convert to df
+# convert to DataFrame
 df = pd.DataFrame(d['DiagnosticData']['LFPTrendLogs'])
-print(df)
 
 # print DataFrame
-# print(df.to_string())
+print(df.to_string())
 
 # need this if running code on IDLE
 # plt.show() 
