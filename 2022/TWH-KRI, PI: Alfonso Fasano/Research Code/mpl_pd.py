@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 
 import pandas as pd
 
-# (redacted)
+# 3815, 3108, 4034
 # open JSON file (redacted)
-r = open('redacted')
+r = open('Report_Json_Session_Report_20220607T124034[1].json')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('Report_Json_Session_Report_20220607T123815[1].json')
@@ -38,6 +38,8 @@ for i in df:
 # traverse through DataFrame
 # iterate through non-null counts of column sensing_channel and print information
 for i in range(0, int(df.count())):
+    # current = df.iloc[i]
+    # array = current.axes;
     print(df.iloc[i])
 
 # need this if running code on IDLE
