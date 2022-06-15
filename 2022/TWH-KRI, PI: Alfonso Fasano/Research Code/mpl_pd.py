@@ -56,7 +56,7 @@ for i in range(0, int(df.count())):
 
     # plot data on axes
     date = date_time[1].split('T')[0]
-    ax.plot(date, local_field_potential, linestyle='-', marker='.', c="blue")
+    ax.plot(date, local_field_potential, linestyle='-', marker='.', c="cyan")
 
 # need this if running code on IDLE
 plt.show() 
