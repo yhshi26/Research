@@ -2,19 +2,22 @@
 ## Software
 ### Python
 - Documentation: https://docs.python.org/3/
+#### (for) Data
+- JSON: https://www.w3schools.com/python/python_json.asp
 - NumPy: https://numpy.org/doc/
 - Pandas: https://pandas.pydata.org/docs/
+  - Tutorial: https://www.w3schools.com/python/pandas/default.asp
+#### Graphing
 - Matplotlib: https://matplotlib.org/stable/index.html
-- Tutorials:
-  - JSON: https://www.w3schools.com/python/python_json.asp
-  - Pandas: https://www.w3schools.com/python/pandas/default.asp
-  - Scikit-learn: https://scikit-learn.org/stable/user_guide.html
-  - Matplotlib: https://www.w3schools.com/python/matplotlib_intro.asp
-
-### MATLAB
-- Documentation: https://www.mathworks.com/help/matlab/
-- Data import/analysis: https://www.mathworks.com/help/matlab/data-import-and-analysis.html
-- Mathematics: https://www.mathworks.com/help/matlab/mathematics.html
+  - Tutorial: https://www.w3schools.com/python/matplotlib_intro.asp
+#### Machine learning
+- (Helpful dependency if no time to implement) scikit-learn: https://scikit-learn.org/stable/user_guide.html
+##### Support vector machines
+- Explained: https://www.youtube.com/watch?v=_YPScrckx28
+- Implementation: https://www.youtube.com/watch?v=UX0f9BNBcsY
+##### Decision trees
+- Explained: https://www.youtube.com/watch?v=jVh5NA9ERDA
+- Implementation: https://www.youtube.com/watch?v=Bqi7EFFvNOg
 
 ### File types
 #### JSON 
@@ -41,19 +44,3 @@
 
 ### Deep brain stimulation
 - Wikipedia: https://en.wikipedia.org/wiki/Deep_brain_stimulation
-
-## Building a database/cloudbase, questionnaire based scales for patients:
-### Databases
-- Oracle: https://www.oracle.com/database/what-is-database/#:~:text=A%20database%20is%20an%20organized,database%20management%20system%20(DBMS).
-- Wikipedia: https://en.wikipedia.org/wiki/Database
-
-## Working with data from walking:
-### Parkinson's disease
-- Wikipedia: https://en.wikipedia.org/wiki/Parkinson%27s_disease
-
-### Parkinson's disease with walking
-- Trouble with moving or walking: https://www.parkinson.org/Understanding-Parkinsons/Symptoms/Movement-Symptoms/Trouble-Moving-or-Walking
-- Walking with Parkinson's (freezing, balance and falls): https://www.parkinson.org/blog/research/Walking-with-Parkinsons-Freezing-Balance-and-Falls 
-
-### Virtual reality
-- Research paper (effect of virtual reality training on walking distance and physical fitness in individuals with Parkinson’s disease): https://www.researchgate.net/publication/324426854_Effect_of_virtual_reality_training_on_walking_distance_and_physical_fitness_in_individuals_with_Parkinson's_disease
