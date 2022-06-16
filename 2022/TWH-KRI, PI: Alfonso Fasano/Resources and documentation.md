@@ -2,9 +2,10 @@
 ## Software
 ### Python
 - Documentation: https://docs.python.org/3/
-#### (for) Data
-- JSON: https://www.w3schools.com/python/python_json.asp
+#### Numerical and mathematics
 - NumPy: https://numpy.org/doc/
+#### Loading data
+- JSON: https://www.w3schools.com/python/python_json.asp
 - Pandas: https://pandas.pydata.org/docs/
   - Tutorial: https://www.w3schools.com/python/pandas/default.asp
 #### Graphing
