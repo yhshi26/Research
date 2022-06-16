@@ -2,9 +2,9 @@ import json
 
 import pandas as pd
 
-# 3815, 3108, 4034
+# (redacted)
 # open JSON file (redacted)
-r = open('Report_Json_Session_Report_20220607T123108[1].json')
+r = open('redacted')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
