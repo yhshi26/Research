@@ -40,8 +40,14 @@
 4. Discrete Fourier Transform: https://medium.com/sho-jp/fourier-transform-101-part-4-discrete-fourier-transform-8fc3fbb763f3
 5. Fast Fourier Transform (FFT): https://medium.com/sho-jp/fourier-transform-101-part-5-fast-fourier-transform-fft-38c22e05ead3
 
+### Parkinson's disease
+- https://www.sciencedirect.com/topics/medicine-and-dentistry/parkinsons-disease
+
 ### Local field potentials
 - Wikipedia: https://en.wikipedia.org/wiki/Local_field_potential
+- https://www.sciencedirect.com/topics/medicine-and-dentistry/local-field-potential
 
 ### Deep brain stimulation
 - Wikipedia: https://en.wikipedia.org/wiki/Deep_brain_stimulation
+- https://www.sciencedirect.com/topics/medicine-and-dentistry/electrical-brain-stimulation
+- https://www.sciencedirect.com/topics/medicine-and-dentistry/subthalamic-nucleus
