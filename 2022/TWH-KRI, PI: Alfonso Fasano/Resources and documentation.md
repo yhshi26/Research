@@ -2,13 +2,14 @@
 ## Software
 ### Python
 - Documentation: https://docs.python.org/3/
-- Matplotlib: https://matplotlib.org/stable/index.html
-- Pandas: https://pandas.pydata.org/docs/
 - NumPy: https://numpy.org/doc/
+- Pandas: https://pandas.pydata.org/docs/
+- Matplotlib: https://matplotlib.org/stable/index.html
 - Tutorials:
   - JSON: https://www.w3schools.com/python/python_json.asp
-  - Matplotlib: https://www.w3schools.com/python/matplotlib_intro.asp
   - Pandas: https://www.w3schools.com/python/pandas/default.asp
+  - Scikit-learn: https://scikit-learn.org/stable/user_guide.html
+  - Matplotlib: https://www.w3schools.com/python/matplotlib_intro.asp
 
 ### MATLAB
 - Documentation: https://www.mathworks.com/help/matlab/
