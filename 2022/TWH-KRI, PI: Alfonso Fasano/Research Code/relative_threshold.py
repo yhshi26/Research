@@ -63,9 +63,7 @@ for i in range(0, int(df.count())):
         # plot data on axes
         date_time = date_time[1].split('T')
         date = date_time[0]
-        time = date_time[1]
-        time = time.split('Z')
-        time = time[0].split(':')
+        time = date_time[1].split('Z')[0].split(':')
         date_time = str(date) + "-" + str(time[0]) + "-" + str(time[1]) + "-" + str(time[2])
         ax.plot(date_time, local_field_potential, linestyle='-', marker='.', c="white")
 
@@ -74,10 +72,9 @@ for i in range(0, int(df.count())):
         num_data += 1
 
 relative_threshold = sum/num_data
-ax.axhline(y=relative_threshold, linestyle="-", c="white")
-
 # print relative_threshold
 print("Relative threshold: " + str(relative_threshold))
+ax.axhline(y=relative_threshold, linestyle="-", c="white")
 
 # need this if running code on IDLE
 plt.show() 
