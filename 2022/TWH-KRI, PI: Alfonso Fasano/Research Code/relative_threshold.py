@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 from matplotlib.dates import DateFormatter
 
+import numpy as np
 import pandas as pd
 
 # handle date time conversions between pandas and matplotlib
@@ -17,7 +18,7 @@ register_matplotlib_converters()
 
 # redacted
 # open JSON file (redacted)
-r = open('redacted')
+r = open('redacted.json')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
@@ -47,6 +48,8 @@ ax.yaxis.set_major_locator(plt.MaxNLocator(11))
 sum = 0
 num_data = 0
 
+y_data = []
+
 # traverse through DataFrame
 # iterate through non-null counts of column sensing_channel and print information
 for i in range(0, int(df.count())):
@@ -59,6 +62,7 @@ for i in range(0, int(df.count())):
         date_time = current[1].split("'")
         # local field potential (LFP)
         local_field_potential = int(current[3].split(',')[0])
+        y_data.append(local_field_potential)
 
         # plot data on axes
         date_time = date_time[1].split('T')
@@ -82,6 +86,17 @@ relative_threshold = sum/num_data
 # print relative_threshold
 print("Relative threshold: " + str(relative_threshold))
 ax.axhline(y=relative_threshold, linestyle="-", c="white")
+
+# finding limits for y-axis (https://stackoverflow.com/questions/11882393/matplotlib-disregard-outliers-when-plotting)    
+ypbot = np.percentile(y_data, 1)
+# change yptop percentile to be higher/lower depending on fruequency or extremity of outliers in data
+# yptop = np.percentile(y_data, 75)
+yptop = np.percentile(y_data, 99)
+ypad = 0.2*(yptop - ypbot)
+y_min = ypbot - ypad
+y_max = yptop + ypad
+
+ax.set_ylim([y_min, y_max])
 
 # need this if running code on IDLE
 plt.show() 
