@@ -14,11 +14,11 @@ import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-date_form = DateFormatter("%y-%m-%d")
+# date_form = DateFormatter("%y-%m-%d")
 
 # redacted
 # open JSON file (redacted)
-r = open('redacted')
+r = open('redacted.json')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
@@ -69,6 +69,8 @@ for i in range(0, int(df.count())):
 
 # finding limits for y-axis (https://stackoverflow.com/questions/11882393/matplotlib-disregard-outliers-when-plotting)    
 ypbot = np.percentile(y_data, 1)
+# change yptop percentile to be higher/lower depending on fruequency or extremity of outliers in data
+# yptop = np.percentile(y_data, 75)
 yptop = np.percentile(y_data, 99)
 ypad = 0.2*(yptop - ypbot)
 y_min = ypbot - ypad
