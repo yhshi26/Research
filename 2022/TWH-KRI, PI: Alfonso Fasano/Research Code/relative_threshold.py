@@ -13,11 +13,11 @@ import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-date_form = DateFormatter("%y-%m-%d")
+# date_form = DateFormatter("%Y-%b-%d-%h-%m-%s")
 
 # redacted
 # open JSON file (redacted)
-r = open('redacted.json')
+r = open('redacted')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
@@ -61,8 +61,13 @@ for i in range(0, int(df.count())):
         local_field_potential = int(current[3].split(',')[0])
 
         # plot data on axes
-        date = date_time[1].split('T')[0]
-        ax.plot(date, local_field_potential, linestyle='-', marker='.', c="white")
+        date_time = date_time[1].split('T')
+        date = date_time[0]
+        time = date_time[1]
+        time = time.split('Z')
+        time = time[0].split(':')
+        date_time = str(date) + "-" + str(time[0]) + "-" + str(time[1]) + "-" + str(time[2])
+        ax.plot(date_time, local_field_potential, linestyle='-', marker='.', c="white")
 
         # add LFP to sum
         sum += local_field_potential
