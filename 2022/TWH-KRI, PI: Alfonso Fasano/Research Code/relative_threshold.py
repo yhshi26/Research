@@ -15,9 +15,9 @@ register_matplotlib_converters()
 
 date_form = DateFormatter("%y-%m-%d")
 
-# 3815, 3108, 4034
+# redacted
 # open JSON file (redacted)
-r = open('Report_Json_Session_Report_20220607T123108[1].json')
+r = open('redacted.json')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
@@ -45,26 +45,30 @@ ax.yaxis.set_major_locator(plt.MaxNLocator(11))
 
 # initiate sum
 sum = 0
+num_data = 0
 
 # traverse through DataFrame
 # iterate through non-null counts of column sensing_channel and print information
 for i in range(0, int(df.count())):
     # df.iloc[i] dtype: object
     # parameters: HemisphereLocationDef.Right/Left [{'DateTime', 'LFP'], name
-    current = str(df.iloc[i][0][i]).split(' ')
-    # parsing out parameters
-    date_time = current[1].split("'")
-    # local field potential (LFP)
-    local_field_potential = int(current[3].split(',')[0])
+    session = df.iloc[i][0]
+    for i in range(0, int(len(session))):
+        current = str(session[i]).split(' ')
+        # parsing out parameters
+        date_time = current[1].split("'")
+        # local field potential (LFP)
+        local_field_potential = int(current[3].split(',')[0])
 
-    # plot data on axes
-    date = date_time[1].split('T')[0]
-    ax.plot(date, local_field_potential, linestyle='-', marker='.', c="white")
+        # plot data on axes
+        date = date_time[1].split('T')[0]
+        ax.plot(date, local_field_potential, linestyle='-', marker='.', c="white")
 
-    # add LFP to sum
-    sum += local_field_potential
+        # add LFP to sum
+        sum += local_field_potential
+        num_data += 1
 
-relative_threshold = sum/int(df.count())
+relative_threshold = sum/num_data
 ax.axhline(y=relative_threshold, linestyle="-", c="white")
 
 # print relative_threshold
