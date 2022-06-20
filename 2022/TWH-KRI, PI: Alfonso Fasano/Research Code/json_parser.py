@@ -13,11 +13,11 @@ import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-date_form = DateFormatter("%y-%m-%d")
+# date_form = DateFormatter("%y-%m-%d")
 
-# 3815, 3108, 4034
+# redacted
 # open JSON file (redacted)
-r = open('Report_Json_Session_Report_20220607T123108[1].json')
+r = open('redacted')
 
 # can't straight-up read JSON object to a DataFrame due to ValueError: All arrays must be of same length
 # df = pd.read_json('redacted')
@@ -48,15 +48,20 @@ ax.yaxis.set_major_locator(plt.MaxNLocator(11))
 for i in range(0, int(df.count())):
     # df.iloc[i] dtype: object
     # parameters: HemisphereLocationDef.Right/Left [{'DateTime', 'LFP'], name
-    current = str(df.iloc[i][0][i]).split(' ')
-    # parsing out parameters
-    date_time = current[1].split("'")
-    # local field potential (LFP)
-    local_field_potential = int(current[3].split(',')[0])
+    session = df.iloc[i][0]
+    for i in range(0, int(len(session))):
+        current = str(session[i]).split(' ')
+        # parsing out parameters
+        date_time = current[1].split("'")
+        # local field potential (LFP)
+        local_field_potential = int(current[3].split(',')[0])
 
-    # plot data on axes
-    date = date_time[1].split('T')[0]
-    ax.plot(date, local_field_potential, linestyle='-', marker='.', c="white")
+        # plot data on axes
+        date_time = date_time[1].split('T')
+        date = date_time[0]
+        time = date_time[1].split('Z')[0].split(':')
+        date_time = str(date) + "-" + str(time[0]) + "-" + str(time[1]) + "-" + str(time[2])
+        ax.plot(date_time, local_field_potential, linestyle='-', marker='.', c="white")
 
 # need this if running code on IDLE
 plt.show() 
