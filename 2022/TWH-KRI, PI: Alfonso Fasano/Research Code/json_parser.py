@@ -7,13 +7,14 @@ import matplotlib.pyplot as plt
 
 from matplotlib.dates import DateFormatter
 
+import numpy as np
 import pandas as pd
 
 # handle date time conversions between pandas and matplotlib
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
-# date_form = DateFormatter("%y-%m-%d")
+date_form = DateFormatter("%y-%m-%d")
 
 # redacted
 # open JSON file (redacted)
@@ -43,6 +44,8 @@ ax.set_ylabel("Local field potential")
 ax.xaxis.set_major_locator(plt.MaxNLocator(6))
 ax.yaxis.set_major_locator(plt.MaxNLocator(11))
 
+y_data = []
+
 # traverse through DataFrame
 # iterate through non-null counts of column sensing_channel and print information
 for i in range(0, int(df.count())):
@@ -55,6 +58,7 @@ for i in range(0, int(df.count())):
         date_time = current[1].split("'")
         # local field potential (LFP)
         local_field_potential = int(current[3].split(',')[0])
+        y_data.append(local_field_potential)
 
         # plot data on axes
         date_time = date_time[1].split('T')
@@ -62,6 +66,15 @@ for i in range(0, int(df.count())):
         time = date_time[1].split('Z')[0].split(':')
         date_time = str(date) + "-" + str(time[0]) + "-" + str(time[1]) + "-" + str(time[2])
         ax.plot(date_time, local_field_potential, linestyle='-', marker='.', c="white")
+
+# finding limits for y-axis (https://stackoverflow.com/questions/11882393/matplotlib-disregard-outliers-when-plotting)    
+ypbot = np.percentile(y_data, 1)
+yptop = np.percentile(y_data, 99)
+ypad = 0.2*(yptop - ypbot)
+y_min = ypbot - ypad
+y_max = yptop + ypad
+
+ax.set_ylim([y_min, y_max])
 
 # need this if running code on IDLE
 plt.show() 
