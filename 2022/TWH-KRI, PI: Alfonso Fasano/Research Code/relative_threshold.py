@@ -71,6 +71,13 @@ for i in range(0, int(df.count())):
         sum += local_field_potential
         num_data += 1
 
+        # debugging outliers (check if logic error)
+        # if local_field_potential > 500:
+        #     print(local_field_potential)
+
+        # debugging y-axis
+        print(local_field_potential)
+
 relative_threshold = sum/num_data
 # print relative_threshold
 print("Relative threshold: " + str(relative_threshold))
