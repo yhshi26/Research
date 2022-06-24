@@ -39,4 +39,4 @@ def parse(fn):
                 local_field_potential = v1['LFP']
                 amplitude = v1['AmplitudeInMilliAmps']
                 diagnostic_data = DiagnosticData(date, local_field_potential, amplitude)
-                patient.add_data(diagnostic_data)
+                patient.add_data(patient, diagnostic_data)
