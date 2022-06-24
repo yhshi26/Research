@@ -12,7 +12,7 @@ class Patient:
     self.session = session
     self.diagnostic_data = []
   
-  def add_data(diagnostic_data):
+  def add_data(self, diagnostic_data):
     self.diagnostic_data.append(diagnostic_data)
 
 class Session:
