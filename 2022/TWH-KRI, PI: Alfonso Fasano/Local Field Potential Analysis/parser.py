@@ -2,6 +2,8 @@ from asyncio.windows_events import NULL
 import json
 
 from patient import *
+
+patients = []
     
 def parse(fn):
     with open(fn) as fn:
@@ -41,5 +43,7 @@ def parse(fn):
                     amplitude = v[v1][v2]['AmplitudeInMilliAmps']
                     diagnostic_data = DiagnosticData(date, local_field_potential, amplitude)
                     patient.add_data(diagnostic_data)
+            patients.append(patient)
             # debugging
-            print(patient)
+            # print(patient)
+           
