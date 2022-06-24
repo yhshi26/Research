@@ -38,6 +38,12 @@ def graph(p):
 
         y_data.append(d.local_field_potential)
 
+    calc(p, ax, sum, num_data, y_data)
+
+    # need this if running code on IDLE
+    plt.show() 
+
+def calc(p, ax, sum, num_data, y_data):
     relative_threshold = sum/num_data
     # print relative_threshold
     print("Relative threshold: " + str(relative_threshold))
@@ -53,6 +59,3 @@ def graph(p):
     y_max = yptop + ypad
 
     ax.set_ylim([y_min, y_max])
-
-    # need this if running code on IDLE
-    plt.show() 
