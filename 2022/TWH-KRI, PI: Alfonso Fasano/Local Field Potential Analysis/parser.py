@@ -41,3 +41,5 @@ def parse(fn):
                     amplitude = v[v1][v2]['AmplitudeInMilliAmps']
                     diagnostic_data = DiagnosticData(date, local_field_potential, amplitude)
                     patient.add_data(diagnostic_data)
+            # debugging
+            print(patient)
