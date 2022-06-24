@@ -27,6 +27,11 @@ class Session:
 
 class DiagnosticData:
     def __init__(self, date, local_field_potential, amplitude):
-        self.date = date
+
+        date_time = date.split('T')
+        date = date_time[0]
+        time = date_time[1].split('Z')[0].split(':')
+
+        self.date = str(date) + "-" + str(time[0]) + "-" + str(time[1]) + "-" + str(time[2])
         self.local_field_potential = local_field_potential
         self.amplitude = amplitude
