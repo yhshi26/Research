@@ -15,22 +15,15 @@ def parse(fn):
             # from PatientInformation: name/surname, gender, diagnosis, implant_date
             # from LeadConfiguration: hemisphere, lead_location
             v = d[i]['Initial']
-            first_name = v['PatientFirstName']
-            last_name = v['PatientLastName']
-            gender = v['PatientGender']
-            diagnosis = v['Diagnosis']
-            patient = Patient(first_name, last_name, gender, diagnosis, NULL, NULL)
+            patient = Patient(v['PatientFirstName'], v['PatientLastName'], v['PatientGender'], v['Diagnosis'], NULL, NULL)
         elif i == 'DeviceInformation':   
             v = d[i]['Initial']
-            implant_date = v['ImplantDate']
-            patient.implant_date = implant_date
+            patient.implant_date = v['ImplantDate']
         # 2. arguments for Session class
         elif i == 'EventSummary':
             # from EventSummary: start/end date, hemisphere
-            start = d[i]['SessionStartDate']
-            end = d[i]['SessionEndDate']
-            hemisphere = d[i]['LfpAndAmplitudeSummary'][0]['Hemisphere']
-            session = Session(start, end, hemisphere)
+            hemisphere =  d[i]['LfpAndAmplitudeSummary'][0]['Hemisphere']
+            session = Session(d[i]['SessionStartDate'], d[i]['SessionEndDate'], hemisphere)
             patient.session = session
         # 3. arguments for DiagnosticData class
         elif i == 'DiagnosticData':
@@ -38,12 +31,8 @@ def parse(fn):
             v = d[i]['LFPTrendLogs'][hemisphere] # this needs to go one level deeper and iterate
             for v1 in v:
                 for v2 in range(0,len(v[v1])):
-                    date = v[v1][v2]['DateTime']
-                    local_field_potential = v[v1][v2]['LFP']
-                    amplitude = v[v1][v2]['AmplitudeInMilliAmps']
-                    diagnostic_data = DiagnosticData(date, local_field_potential, amplitude)
+                    diagnostic_data = DiagnosticData(v[v1][v2]['DateTime'], v[v1][v2]['LFP'], v[v1][v2]['AmplitudeInMilliAmps'])
                     patient.add_data(diagnostic_data)
             patients.append(patient)
             # debugging
-            # print(patient)
-            
+            # print(patient)  
