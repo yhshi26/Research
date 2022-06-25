@@ -17,7 +17,6 @@ class Patient:
 
         patients.append(self)
 
-    # debugging
     def __repr__(self):
         return "<Patient first name: %s, last name: %s, gender: %s, diagnosis: %s, implant date: %s>" % (self.first_name, self.last_name, self.gender, self.diagnosis, self.implant_date)
   
