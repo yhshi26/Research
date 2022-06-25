@@ -34,5 +34,3 @@ def parse(fn):
                     diagnostic_data = DiagnosticData(v[v1][v2]['DateTime'], v[v1][v2]['LFP'], v[v1][v2]['AmplitudeInMilliAmps'])
                     patient.add_data(diagnostic_data)
             patients.append(patient)
-            # debugging
-            # print(patient)  
