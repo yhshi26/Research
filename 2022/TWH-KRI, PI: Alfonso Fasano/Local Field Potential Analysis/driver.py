@@ -1,4 +1,8 @@
 import json
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+
 from parser import parse, patients
 from grapher import graph
 
@@ -14,3 +18,12 @@ for fn in file_names:
 
 for p in patients:
     graph(p)
+
+while True:
+    i = input("give command (options: info, graph) ")
+    if "info" in i:
+        for p in patients:
+            print(p)
+    elif "graph" in i:
+        # need this if running code on IDLE
+        plt.show() 
