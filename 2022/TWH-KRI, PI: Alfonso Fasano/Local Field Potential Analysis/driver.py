@@ -20,10 +20,11 @@ for p in patients:
     graph(p)
 
 while True:
-    i = input("give command (options: info, graph) ")
+    i = input("give command (options: info, graph, end) ")
     if "info" in i:
         for p in patients:
             print(p)
     elif "graph" in i:
-        # need this if running code on IDLE
         plt.show() 
+    elif "end" in i:
+        break
