@@ -13,16 +13,9 @@ register_matplotlib_converters()
 from patient import *
 
 def graph(p): 
-    # graph dark background
-    plt.style.use('dark_background')
-
     # create a figure containing a single axes
-    fig, ax = plt.subplots() 
-    ax.set_xlabel("Date")
-    ax.set_ylabel("Local field potential")
-    # set limits to number of ticks on x and y axes
-    ax.xaxis.set_major_locator(plt.MaxNLocator(6))
-    ax.yaxis.set_major_locator(plt.MaxNLocator(11))
+    fig, ax = plt.subplots()
+    set_ax(ax) 
 
     # initiate sum
     sum = 0
@@ -42,6 +35,16 @@ def graph(p):
 
     calc(p, ax, sum, num_data, y_data)
     p.set_graph(ax)
+
+def set_ax(ax):
+    # graph dark background
+    plt.style.use('dark_background')
+    
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Local field potential")
+    # set limits to number of ticks on x and y axes
+    ax.xaxis.set_major_locator(plt.MaxNLocator(6))
+    ax.yaxis.set_major_locator(plt.MaxNLocator(11))
 
 def calc(p, ax, sum, num_data, y_data):
     relative_threshold = sum/num_data
