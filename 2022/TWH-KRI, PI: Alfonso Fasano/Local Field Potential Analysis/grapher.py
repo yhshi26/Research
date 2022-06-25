@@ -10,6 +10,8 @@ import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
+from patient import *
+
 def graph(p): 
     # graph dark background
     plt.style.use('dark_background')
@@ -39,14 +41,10 @@ def graph(p):
         y_data.append(d.local_field_potential)
 
     calc(p, ax, sum, num_data, y_data)
-
-    # need this if running code on IDLE
-    plt.show() 
+    p.set_graph(ax)
 
 def calc(p, ax, sum, num_data, y_data):
     relative_threshold = sum/num_data
-    # print relative_threshold
-    print("Relative threshold: " + str(relative_threshold))
     ax.axhline(y=relative_threshold, linestyle="-", c="white")
 
     # finding limits for y-axis (https://stackoverflow.com/questions/11882393/matplotlib-disregard-outliers-when-plotting)    
