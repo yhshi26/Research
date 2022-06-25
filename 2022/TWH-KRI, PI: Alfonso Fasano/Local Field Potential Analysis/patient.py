@@ -2,6 +2,8 @@ from asyncio.windows_events import NULL
 from contextlib import nullcontext
 import imp
 
+patients = []
+
 class Patient:
     def __init__(self, first_name, last_name, gender, diagnosis, implant_date, session):
         self.first_name = first_name
@@ -11,6 +13,9 @@ class Patient:
         self.implant_date = implant_date
         self.session = session
         self.diagnostic_data = []
+        self.graph = NULL
+
+        patients.append(self)
 
     # debugging
     def __repr__(self):
@@ -18,6 +23,9 @@ class Patient:
   
     def add_data(self, diagnostic_data):
         self.diagnostic_data.append(diagnostic_data)
+
+    def set_graph(self, graph):
+        self.graph = graph
 
 class Session:
     def __init__(self, start, end, hemisphere):
