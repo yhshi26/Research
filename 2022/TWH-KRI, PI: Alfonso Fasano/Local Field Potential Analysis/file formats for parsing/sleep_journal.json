@@ -117,5 +117,145 @@
 		}
 	],
 	"OtherData": [
-		
+		"Day1": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day2": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day3": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day4": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day5": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day6": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		},
+		"Day7": {
+			"CoffeeConsumedTime": "HH:MM",
+			"CoffeeNumbers": integer,
+			"ExerciseM": integer,
+			"ExerciseTime": "HH:MM",
+			"Nap": boolean,
+			"NapH": integer,
+			"NapM": integer,
+			"ListMedications": [
+				array of strings
+			],
+			"2HoursBeforeBed": [
+				"Alcohol": boolean,
+				"1+glasses": boolean,
+				"HeavyMeal": boolean,
+				"Caffeine": boolean,
+				"NA": boolean
+			],
+			"NightRoutine": ""			
+		}
 	]
+}
