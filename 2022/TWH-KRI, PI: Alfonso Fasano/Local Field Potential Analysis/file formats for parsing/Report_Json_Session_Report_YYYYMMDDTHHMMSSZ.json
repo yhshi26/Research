@@ -1,0 +1,661 @@
+{
+	"AbnormalEnd": boolean,
+	"FullyReadForSession": boolean,
+	"FeatureInformationCode": "",
+	"SessionDate": "YYYY-MM-DDTHH:MM:SSZ",
+	"SessionEndDate": "YYYY-MM-DDTHH:MM:SSZ",
+	"ProgrammerTimezone": "",
+	"ProgrammerUtcOffset": "",
+	"ProgrammerLocale": "",
+	"ProgrammerVersion": "",
+	"PatientInformation": {
+		"Initial": {
+			"PatientFirstName": "",
+			"PatientLastName": 
+			"PatientGender": "",
+			"PatientId": "",
+			"ClinicianNotes": "",
+			"Diagnosis": ""
+		},
+		"Final": {
+			"PatientFirstName": "",
+			"PatientLastName": 
+			"PatientGender": "",
+			"PatientId": "",
+			"ClinicianNotes": "",
+			"Diagnosis": ""
+		}
+	},
+	"DeviceInformation": {
+		"Initial": {
+			"Neurostimulator": "",
+			"NeurostimulatorModel": "",
+			"NeurostimulatorSerialNumber": "",
+			"NeurostimulatorLocation": "",
+			"ImplantDate": "YYYY-MM-DDTHH:MM:SSZ",
+			"DeviceDateTime": "YYYY-MM-DDTHH:MM:SSZ",
+			"OverdischargeCount": "",
+			"ProductApplicationId": "",
+			"ProductVersion": "",
+			"DeviceApplicationId": "",
+			"DeviceVersion": "",
+			"CoreApplicationId": "",
+			"CoreVersion": "",
+			"AccumulatedTherapyOnTimeSinceImplant": integer,
+			"AccumulatedTherapyOnTimeSinceFollowup": integer,
+			"DeviceName": ""
+		},
+		"Final": {
+			"Neurostimulator": "",
+			"NeurostimulatorModel": "",
+			"NeurostimulatorSerialNumber": "",
+			"NeurostimulatorLocation": "",
+			"ImplantDate": "YYYY-MM-DDTHH:MM:SSZ",
+			"DeviceDateTime": "YYYY-MM-DDTHH:MM:SSZ",
+			"OverdischargeCount": "",
+			"ProductApplicationId": "",
+			"ProductVersion": "",
+			"DeviceApplicationId": "",
+			"DeviceVersion": "",
+			"CoreApplicationId": "",
+			"CoreVersion": "",
+			"AccumulatedTherapyOnTimeSinceImplant": integer,
+			"AccumulatedTherapyOnTimeSinceFollowup": integer,
+			"DeviceName": ""
+		}
+	},
+	"BatteryInformation": {
+		"BatteryPercentage": integer,
+		"EstimatedBatteryLifeMonths": integer,
+		"TTEData": "",
+		"BatteryStatus": ""
+	},
+	"GroupUsagePercentage": [
+		{},
+		{
+			"GroupId": "",
+			"UsagePercentage": double
+		},
+		{},
+		{}
+	],
+	"LeadConfiguration": {
+		"Initial": [
+			{
+				"Hemisphere": "HemisphereLocationDef.Left/Right",
+				"Model": "",
+				"LeadLocation": "LeadLocationDef.Vim/Gpi/Stn/etc.",
+				"ElectrodeNumber": "",
+				"TipOffset": ""
+			},
+			{
+				"Hemisphere": "HemisphereLocationDef.Left/Right",
+				"Model": "",
+				"LeadLocation": "LeadLocationDef.Vim/Gpi/Stn/etc.",
+				"ElectrodeNumber": "",
+				"TipOffset": ""
+			}
+		],
+		"Final": [
+			{
+				"Hemisphere": "HemisphereLocationDef.Left/Right",
+				"Model": "",
+				"LeadLocation": "LeadLocationDef.Vim/Gpi/Stn/etc.",
+				"ElectrodeNumber": "",
+				"TipOffset": ""
+			},
+			{
+				"Hemisphere": "HemisphereLocationDef.Left/Right",
+				"Model": "",
+				"LeadLocation": "LeadLocationDef.Vim/Gpi/Stn/etc.",
+				"ElectrodeNumber": "",
+				"TipOffset": ""
+			}
+		]
+	},
+	"Stimulation": {
+		"InitialStimStatus": "StimStatusDef.ON/OFF",
+		"FinalStimStatus": "StimStatusDef.ON/OFF"
+	},
+	"Groups": {
+		"Initial": [
+			{
+				"GroupId": "",
+				"GroupName": "",
+				"ActiveGroup": boolean,
+				"Mode": "",
+				"AdjustableParameter": "",
+				"ProgramSettings": {
+					"AmplitudeControl": "",
+					"LeftHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer
+							}
+						]
+					},
+					"RightHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer
+							}
+						]
+					}
+				},
+				"GroupSettings": {
+					"SoftStartStop": {
+						"Enabled": boolean
+					},
+					"Cycling": {
+						"Enabled": boolean
+					}
+				}
+			},
+			{
+				"GroupId": "",
+				"GroupName": "",
+				"ActiveGroup": boolean,
+				"Mode": "",
+				"AdjustableParameter": "",
+				"ProgramSettings": {
+					"AmplitudeControl": "",
+					"RightHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer,
+								"UpperLimitInMilliAmps": double,
+								"LowerLimitInMilliAmps": double,
+							}
+						]
+					},
+					"SensingChannel": [
+						{
+							"HemisphereLocation": "",
+							"ProgramId": "",
+							"ElectrodeState": [
+								{
+									"Electrode": "",
+									"ElectrodeStateResult": "",
+									"ElectrodeAmplitudeInMilliAmps": double,
+									"ElectrodeFractionOf64": integer
+								},
+								{
+									"Electrode": "",
+									"ElectrodeStateResult": ""
+								}
+							],
+							"PulseWidthInMicroSecond": integer,
+							"RateInHertz": integer,
+							"BrainSensingStatus": "",
+							"Channel": "",
+							"UpperLfpThreshold": double,
+							"LowerLfpThreshold": double,
+							"UpperCaptureAmplitudeInMilliAmps": double,
+							"LowerCaptureAmplitudeInMilliAmps": double,
+							"MeasuredUpperLfp": integer,
+							"MeasuredLowerLfp": integer,
+							"UpperLimitInMilliAmps": double,
+							"LowerLimitInMilliAmps": double,
+							"SuspendAmplitudeInMilliAmps": double,
+							"SensingSetup": {
+								"FrequencyInHertz": double,
+								"AveragingDurationInMilliSeconds": integer,
+								"ChannelSignalResult": {
+									"Channel": "",
+									"ArtifactStatus": "",
+									"SignalFrequencies": [
+										array of doubles
+									],
+									"SignalPsdValues": [
+										array of doubles
+									],
+									"PeakFrequencies": [
+										array of doubles
+									],
+									"PeakValues": [
+										array of doubles
+									]
+								}
+							}
+						}
+					]
+				},
+				"GroupSettings": {
+					"SoftStartStop": {
+						"Enabled": boolean
+					},
+					"Cycling": {
+						"Enabled": boolean
+					},
+					"HighPassFilterInHertz": integer,
+					"SensingBlankingDurationInMicroseconds": integer
+				}
+			}
+		],
+		"Final": [
+			{
+				"GroupId": "",
+				"GroupName": "",
+				"ActiveGroup": boolean,
+				"Mode": "",
+				"AdjustableParameter": "",
+				"ProgramSettings": {
+					"AmplitudeControl": "",
+					"LeftHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer
+							}
+						]
+					},
+					"RightHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer
+							}
+						]
+					}
+				},
+				"GroupSettings": {
+					"SoftStartStop": {
+						"Enabled": boolean
+					},
+					"Cycling": {
+						"Enabled": boolean
+					}
+				}
+			},
+			{
+				"GroupId": "",
+				"GroupName": "",
+				"ActiveGroup": boolean,
+				"Mode": "",
+				"AdjustableParameter": "",
+				"ProgramSettings": {
+					"AmplitudeControl": "",
+					"RightHemisphere": {
+						"Programs": [
+							{
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": "",
+										"ElectrodeAmplitudeInMilliAmps": double,
+										"ElectrodeFractionOf64": integer
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"AmplitudeInMilliAmps": double,
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer,
+								"UpperLimitInMilliAmps": double,
+								"LowerLimitInMilliAmps": double,
+							}
+						]
+					},
+					"SensingChannel": [
+						{
+							"HemisphereLocation": "",
+							"ProgramId": "",
+							"ElectrodeState": [
+								{
+									"Electrode": "",
+									"ElectrodeStateResult": "",
+									"ElectrodeAmplitudeInMilliAmps": double,
+									"ElectrodeFractionOf64": integer
+								},
+								{
+									"Electrode": "",
+									"ElectrodeStateResult": ""
+								}
+							],
+							"PulseWidthInMicroSecond": integer,
+							"RateInHertz": integer,
+							"BrainSensingStatus": "",
+							"Channel": "",
+							"UpperLfpThreshold": double,
+							"LowerLfpThreshold": double,
+							"UpperCaptureAmplitudeInMilliAmps": double,
+							"LowerCaptureAmplitudeInMilliAmps": double,
+							"MeasuredUpperLfp": integer,
+							"MeasuredLowerLfp": integer,
+							"UpperLimitInMilliAmps": double,
+							"LowerLimitInMilliAmps": double,
+							"SuspendAmplitudeInMilliAmps": double,
+							"SensingSetup": {
+								"FrequencyInHertz": double,
+								"AveragingDurationInMilliSeconds": integer,
+								"ChannelSignalResult": {
+									"Channel": "",
+									"ArtifactStatus": "",
+									"SignalFrequencies": [
+										array of doubles
+									],
+									"SignalPsdValues": [
+										array of doubles
+									],
+									"PeakFrequencies": [
+										array of doubles
+									],
+									"PeakValues": [
+										array of doubles
+									]
+								}
+							}
+						}
+					]
+				},
+				"GroupSettings": {
+					"SoftStartStop": {
+						"Enabled": boolean
+					},
+					"Cycling": {
+						"Enabled": boolean
+					},
+					"HighPassFilterInHertz": integer,
+					"SensingBlankingDurationInMicroseconds": integer
+				}
+			}
+		]
+	},
+	"BatteryReminder": {
+		"Enabled": boolean
+	},
+	"MostRecentInSessionSignalCheck": [],
+	"Impedance": [
+		{
+			"ImpedanceStatus": "",
+			"TestCurrentMA": "",
+			"Hemisphere": [
+				{
+					"Hemisphere": "HemisphereLocationDef.Left/Right",
+					"SessionImpedance": {
+						"Monopolar": [
+							{
+								"Electrode1": "ElectrodeDef.Case",
+								"Electrode2": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"ResultValue": integer
+							}
+						],
+						"Bipolar": [
+							{
+								"Electrode1": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"Electrode2": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"ResultValue": integer
+							}
+						]
+					}
+				},
+				{
+					"Hemisphere": "HemisphereLocationDef.Right",
+					"SessionImpedance": {
+						"Monopolar": [
+							{
+								"Electrode1": "ElectrodeDef.Case",
+								"Electrode2": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"ResultValue": integer
+							}
+						],
+						"Bipolar": [
+							{
+								"Electrode1": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"Electrode2": "ElectrodeDef.FourElectrodes_0/1/2/3/4",
+								"ResultValue": integer
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"GroupHistory": [
+		{
+			"SessionDate": "YYYY-MM-DDTHH:MM:SSZ",
+			"Groups": [
+				{
+					"GroupId": "",
+					"ActiveGroup": boolean,
+					"ProgramSettings": {
+						"AmplitudeControl": "",
+						"LeftHemisphere": {
+							"Programs": [
+								{
+									"ProgramId": "",
+									"ElectrodeState": [
+										{
+											"Electrode": "",
+											"ElectrodeStateResult": ""
+										},
+										{
+											"Electrode": "ElectrodeDef.Case",
+											"ElectrodeStateResult": ""
+										}
+									],
+									"AmplitudeInMilliAmps": double,
+									"PulseWidthInMicroSecond": integer,
+									"RateInHertz": integer
+								}
+							]
+						},
+						"RightHemisphere": {
+							"Programs": [
+								{
+									"ProgramId": "",
+									"ElectrodeState": [
+										{
+											"Electrode": "",
+											"ElectrodeStateResult": ""
+										},
+										{
+											"Electrode": "ElectrodeDef.Case",
+											"ElectrodeStateResult": ""
+										}
+									],
+									"AmplitudeInMilliAmps": double,
+									"PulseWidthInMicroSecond": integer,
+									"RateInHertz": integer
+								}
+							]
+						}
+					},
+					"GroupSettings": {
+						"SoftStartStop": {
+							"Enabled": boolean
+						},
+						"Cycling": {
+							"Enabled": boolean
+						}
+					}
+				},
+				{
+					"GroupId": "",
+					"ActiveGroup": boolean,
+					"ProgramSettings": {
+						"AmplitudeControl": "",
+						"RightHemisphere": {
+							"Programs": [
+								{
+									"ProgramId": "",
+									"ElectrodeState": [
+										{
+											"Electrode": "",
+											"ElectrodeStateResult": ""
+										},
+										{
+											"Electrode": "",
+											"ElectrodeStateResult": ""
+										}
+									],
+									"AmplitudeInMilliAmps": double,
+									"PulseWidthInMicroSecond": integer,
+									"RateInHertz": integer
+								}
+							]
+						},
+						"SensingChannel": [
+							{
+								"HemisphereLocation": "HemisphereLocationDef.Left/Right",
+								"ProgramId": "",
+								"ElectrodeState": [
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									},
+									{
+										"Electrode": "",
+										"ElectrodeStateResult": ""
+									}
+								],
+								"PulseWidthInMicroSecond": integer,
+								"RateInHertz": integer,
+								"BrainSensingStatus": "",
+								"Channel": "",
+								"UpperLfpThreshold": double,
+								"LowerLfpThreshold": double,
+								"UpperCaptureAmplitudeInMilliAmps": double,
+								"LowerCaptureAmplitudeInMilliAmps": double,
+								"MeasuredUpperLfp": integer,
+								"MeasuredLowerLfp": integer,
+								"SuspendAmplitudeInMilliAmps": double,
+								"SensingSetup": {
+									"FrequencyInHertz": double,
+									"AveragingDurationInMilliSeconds": integer,
+									"ChannelSignalResult": {}
+								}
+							}
+						]
+					},
+					"GroupSettings": {
+						"SoftStartStop": {
+							"Enabled": boolean
+						},
+						"Cycling": {
+							"Enabled": boolean
+						},
+						"HighPassFilterInHertz": integer,
+						"SensingBlankingDurationInMicroseconds": integer
+					}
+				},
+				{
+					"GroupId": ""
+				},
+				{
+					"GroupId": ""
+				}
+			]
+		}
+	],
+	"EventSummary": {
+		"SessionStartDate": "YYYY-MM-DDTHH:MM:SSZ",
+		"SessionEndDate": "YYYY-MM-DDTHH:MM:SSZ",
+		"LfpAndAmplitudeSummary": [
+			{
+				"GroupId": "",
+				"Hemisphere": "HemisphereLocationDef.Left/Right",
+				"LeadLocation": "LeadLocationDef.Vim/Gpi/Stn",
+				"AboveThresholdPercent": integer,
+				"BetweenThresholdPercent": "N/A",
+				"BelowThresholdPercent": integer,
+				"AverageAmplitude": double
+			}
+		]
+	},
+	"DiagnosticData": {
+		"LFPTrendLogs": {
+			"HemisphereLocationDef.Left/Right": {
+				"YYYY-MM-DDTHH:MM:SSZ": [
+					{
+						"DateTime": "YYYY-MM-DDTHH:MM:SSZ",
+						"LFP": integer,
+						"AmplitudeInMilliAmps": double
+					}
+				]
+			}
+		},
+		"EventLogs": [
+			{
+				"DateTime": "YYYY-MM-DDTHH:MM:SSZ",
+				"SessionType": "SessionStateDef.SessionStart/End"
+			}
+		]
+	}
+}
