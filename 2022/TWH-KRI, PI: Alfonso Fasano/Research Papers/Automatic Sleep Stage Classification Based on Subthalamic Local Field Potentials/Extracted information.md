@@ -6,6 +6,7 @@
 - Study chronically monitors sleep-wake cycles and investigates the use of closed-loop DBS to achieve more precise neuromodulation
     - Local field potential (LFP) signals sensed by the DBS electrode are processed as primary feedback signals
 - Automatic sleep-stage classification models used **machine learning (support vector machine and decision tree)**
+    - "**Features extracted in alpha (8-13 Hz), beta (13-35 Hz), and gamma (35-50 Hz) bands were found to contribute the most to the classification."**
 
 ## Introduction
 - "Sleep disorders are commonly observed in PD patients [2],[3]."
