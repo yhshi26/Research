@@ -1,0 +1,121 @@
+{
+	"PatientFirstName": "",
+	"PatientLastName": "",
+	"StartDate": "YYYY-MM-DDTHH:MM:SSZ"
+	"SleepData": [
+		"Day1": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day2": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day3": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day4": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day5": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day6": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		},
+		"Day7": {
+			"GetInBed": "HH:MM",
+			"TryToSleep": "HH:MM",
+			"HowLongTakeH": integer,
+			"HowLongTakeM": integer,
+			"WakeUp": "HH:MM",
+			"TimesWakeUpDuringNight": integer,
+			"NumberMinutesDuringNight": integer,
+			"HowLongSleptH": integer,
+			"HowLongSleptM": integer,
+			"SleepQualityRating": integer (from 1-5, very poor-very good),
+			"Notes": {
+				"Disturbances": "",
+				"Comments": ""
+			}
+		}
+	],
+	"OtherData": [
+		
+	]
