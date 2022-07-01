@@ -9,19 +9,20 @@ from grapher import graph
 with open('file_names.txt') as fn:
     file_names = fn.readlines()
 
-# file_names stored locally to protect any potential sensitive information
 for fn in file_names:
     parse(fn.split('\n')[0])
 
-for p in patients:
-    graph(p)
-
 while True:
-    i = input("give command (options: info, graph, end) ")
-    if "info" in i:
+    commands = ["info", "graph", "end"]
+    i = input("give command (or help) ")
+    if "help" in i:
+        print ("commands: " + str(commands))
+    elif "info" in i:
         for p in patients:
             print(p)
     elif "graph" in i:
+        for p in patients:
+            graph(p)
         plt.show() 
     elif "end" in i:
         break
