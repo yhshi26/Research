@@ -47,8 +47,8 @@ def calc(p, ax, sum, num_data, y_data):
     ax.axhline(y=relative_threshold, linestyle="-", c="white")
 
     # https://stackoverflow.com/questions/11882393/matplotlib-disregard-outliers-when-plotting
-    ypbot = np.percentile(y_data, 1)
     # change yptop percentile to be higher/lower depending on frequency or extremity of outliers in data
+    ypbot = np.percentile(y_data, 1)
     yptop = np.percentile(y_data, 99)
     ypad = 0.2*(yptop - ypbot)
     y_min = ypbot - ypad
