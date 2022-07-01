@@ -34,7 +34,6 @@ class Session:
 
 class DiagnosticData:
     def __init__(self, date, local_field_potential, amplitude):
-
         date_time = date.split('T')
         date = date_time[0]
         time = date_time[1].split('Z')[0].split(':')
