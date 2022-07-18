@@ -14,20 +14,28 @@ def parse(fn):
             # from PatientInformation: name/surname, gender, diagnosis, implant_date
             # from LeadConfiguration: hemisphere, lead_location
             v = d[i]['Initial']
-            patient = Patient(v['PatientFirstName'], v['PatientLastName'], v['PatientGender'], v['Diagnosis'], NULL, NULL)
+            patient = Patient(v['PatientFirstName'], v['PatientLastName'], v['PatientGender'], v['Diagnosis'], NULL)
         elif i == 'DeviceInformation':   
             v = d[i]['Initial']
             patient.implant_date = v['ImplantDate']
         elif i == 'EventSummary':
             # from EventSummary: start/end date, hemisphere
-            hemisphere =  d[i]['LfpAndAmplitudeSummary'][0]['Hemisphere']
-            session = Session(d[i]['SessionStartDate'], d[i]['SessionEndDate'], hemisphere)
-            patient.session = session
+            left =  d[i]['LfpAndAmplitudeSummary'][0]['Hemisphere'] 
+            right =  d[i]['LfpAndAmplitudeSummary'][1]['Hemisphere']
+            left_session = Session(d[i]['SessionStartDate'], d[i]['SessionEndDate'], left)
+            right_session = Session(d[i]['SessionStartDate'], d[i]['SessionEndDate'], right)
+            patient.sessions.append(left_session)
+            patient.sessions.append(right_session)
         elif i == 'DiagnosticData':
             # from DiagnosticData: (LFPTrendLogs: hemisphere): date/time, local_field_potential, amplitude
-            v = d[i]['LFPTrendLogs'][hemisphere] # this needs to go one level deeper and iterate
+            v = d[i]['LFPTrendLogs'][left] # this needs to go one level deeper and iterate
             for v1 in v:
                 for v2 in range(0,len(v[v1])):
-                    diagnostic_data = DiagnosticData(v[v1][v2]['DateTime'], v[v1][v2]['LFP'], v[v1][v2]['AmplitudeInMilliAmps'])
-                    patient.add_data(diagnostic_data)
+                    left_diagnostic_data = DiagnosticData(v[v1][v2]['DateTime'], v[v1][v2]['LFP'], v[v1][v2]['AmplitudeInMilliAmps'])
+                    patient.left_diagnostic_data.append(left_diagnostic_data)
+            v = d[i]['LFPTrendLogs'][right] # this needs to go one level deeper and iterate
+            for v1 in v:
+                for v2 in range(0,len(v[v1])):
+                    right_diagnostic_data = DiagnosticData(v[v1][v2]['DateTime'], v[v1][v2]['LFP'], v[v1][v2]['AmplitudeInMilliAmps'])
+                    patient.right_diagnostic_data.append(right_diagnostic_data)
             patients.append(patient)
